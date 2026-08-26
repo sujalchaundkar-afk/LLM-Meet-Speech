@@ -27,9 +27,9 @@ Speech → STT → LLM → TTS → Speech
 The project deliberately keeps the three AI components separate so students can understand the pipeline.
 
 ## Extensions
-RAG knowledge base
-conversation history
-multiple languages
-selectable voices
-tool calling
-streaming
+- RAG knowledge base
+- conversation history
+- multiple languages
+- selectable voices
+- tool calling
+- streaming
