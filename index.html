@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Voice Assistant</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+<header>
+<h1>🎙️ AI Voice Assistant</h1>
+<p>Ask by text or voice. The assistant understands, thinks, and speaks.</p>
+</header>
+
+<section class="card">
+<h2>1. Ask your question</h2>
+<textarea id="textInput" placeholder="Example: Explain RAG in simple terms."></textarea>
+<button id="textButton">Generate Voice Response</button>
+
+<div class="or">OR</div>
+
+<h3>Voice input</h3>
+<div>
+<button id="recordButton">🎤 Start Recording</button>
+<span id="recordStatus">Not recording</span>
+</div>
+<audio id="recordedAudio" controls hidden></audio>
+<button id="voiceButton" disabled>Send Voice Question</button>
+</section>
+
+<section class="card" id="results" hidden>
+<h2>2. What the assistant understood</h2>
+<div class="box"><p id="transcript"></p></div>
+<h2>3. AI response</h2>
+<div class="box"><p id="answer"></p></div>
+<h2>4. Voice response</h2>
+<audio id="responseAudio" controls></audio>
+<a id="downloadLink" class="download" download>⬇ Download Audio</a>
+</section>
+
+<section class="card">
+<h2>What is happening?</h2>
+<div class="pipeline"><span>🎤 Speech</span> → <span>📝 STT</span> → <span>🧠 LLM</span> → <span>🔊 TTS</span></div>
+</section>
+<p id="error"></p>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
